@@ -188,8 +188,9 @@ ulong OpenGarage::read_distance_once() {
   // wait till echo pin's rising edge
   while(digitalRead(PIN_ECHO)==LOW);
   unsigned long start_time = micros();
+  unsigned long end_time = start_time + 32767L;
   // wait till echo pin's falling edge
-  while(digitalRead(PIN_ECHO)==HIGH);
+  while((digitalRead(PIN_ECHO)==HIGH)&&(micros()<end_time));
   ulong lapse = micros() - start_time;
   if (lapse>32767L) lapse = 32767L;
   return lapse;
