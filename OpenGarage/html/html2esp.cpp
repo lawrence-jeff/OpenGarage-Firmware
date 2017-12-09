@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
   	  } 
   	}
   	if(size) {
-  	  if(strncmp(in, "</body>", 7)==0) {
+  	  if(strncmp(out, "</body>", 7)==0) {
   	    *outp++ = ')';
   	    *outp++ = '\"';
   	    *outp++ = ';';
