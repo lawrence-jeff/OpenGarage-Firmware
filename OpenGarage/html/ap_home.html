@@ -88,6 +88,7 @@
             var signalstrength= listSSID[prop]>-71?'Ok':(listSSID[prop]>-81?'Weak':'Poor');
             var row=id('rd').insertRow(-1);
             row.innerHTML ="<tr><td><input name='ssids' id='rd"+i+"' onclick='sel(" + i + ")' type='radio' value='"+prop+"'>"+prop+"</td>"+"<td align='center'>"+signalstrength+"</td>"+"<td align='center'>("+listSSID[prop]+" dbm)</td>" + "</tr>";
+            i=i+1
             }
          }
       };
